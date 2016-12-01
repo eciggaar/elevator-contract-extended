@@ -431,7 +431,7 @@ var schemas = `{
 			"description": "event sent to init on deployment",
 			"properties": {
 				"nickname": {
-					"default": "ELEVATOR",
+					"default": "Elevator",
 					"description": "The nickname of the current contract",
 					"type": "string"
 				},
