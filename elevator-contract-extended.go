@@ -248,6 +248,7 @@ func (t *SimpleChaincode) validateInput(args []string) (stateIn AssetState, err 
 	jsonData := args[0]
 	assetID = ""
 	stateJSON := []byte(jsonData)
+	fmt.Printf("stateJSON = %#v \n", stateJSON)
 	err = json.Unmarshal(stateJSON, &stateIn)
 	if err != nil {
 		err = errors.New("Unable to unmarshal input JSON data")
