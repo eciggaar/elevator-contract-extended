@@ -220,12 +220,12 @@ var schemas = `{
 						"cleanessOfFloor": {
 							"description": "Asset cleaness of floor",
 							"type": "number"
-						}
+						},
+						"assetID": {
+							"description": "The ID of a managed asset. The resource focal point for a smart contract.",
+							"type": "string"
+						}						
 					},
-					"assetID": {
-						"description": "The ID of a managed asset. The resource focal point for a smart contract.",
-						"type": "string"
-					}
 					"type": "object"
 				}
 			},
@@ -420,7 +420,7 @@ var schemas = `{
 				"assetID": {
 					"description": "The ID of a managed asset. The resource focal point for a smart contract.",
 					"type": "string"
-				}				
+				}
 			},
 			"required": [
 				"assetID"
