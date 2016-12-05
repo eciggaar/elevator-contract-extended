@@ -10,10 +10,6 @@ var schemas = `{
 					"items": {
 						"description": "A set of fields that constitute the writable fields in an asset's state. AssetID is mandatory along with at least one writable field. In this contract pattern, a partial state is used as an event.",
 						"properties": {
-							"assetID": {
-								"description": "The ID of a managed asset. The resource focal point for a smart contract.",
-								"type": "string"
-							},
 							"motorTemp": {
 								"description": "Asset motor temperature",
 								"type": "number"
@@ -57,6 +53,10 @@ var schemas = `{
 							"cleanessOfFloor": {
 								"description": "Asset cleaness of floor",
 								"type": "number"
+							},
+							"assetID": {
+								"description": "The ID of a managed asset. The resource focal point for a smart contract.",
+								"type": "string"
 							}
 						},
 						"required": [
@@ -177,10 +177,6 @@ var schemas = `{
 				"result": {
 					"description": "A set of fields that constitute the complete asset state.",
 					"properties": {
-						"assetID": {
-							"description": "The ID of a managed asset. The resource focal point for a smart contract.",
-							"type": "string"
-						},
 						"motorTemp": {
 							"description": "Asset motor temperature",
 							"type": "number"
@@ -226,6 +222,10 @@ var schemas = `{
 							"type": "number"
 						}
 					},
+					"assetID": {
+						"description": "The ID of a managed asset. The resource focal point for a smart contract.",
+						"type": "string"
+					}
 					"type": "object"
 				}
 			},
@@ -289,10 +289,6 @@ var schemas = `{
 					"items": {
 						"description": "A set of fields that constitute the writable fields in an asset's state. AssetID is mandatory along with at least one writable field. In this contract pattern, a partial state is used as an event.",
 						"properties": {
-							"assetID": {
-								"description": "The ID of a managed asset. The resource focal point for a smart contract.",
-								"type": "string"
-							},
 							"motorTemp": {
 								"description": "Asset motor temperature",
 								"type": "number"
@@ -336,6 +332,10 @@ var schemas = `{
 							"cleanessOfFloor": {
 								"description": "Asset cleaness of floor",
 								"type": "number"
+							},
+							"assetID": {
+								"description": "The ID of a managed asset. The resource focal point for a smart contract.",
+								"type": "string"
 							}
 						},
 						"required": [
@@ -373,10 +373,6 @@ var schemas = `{
 		"event": {
 			"description": "A set of fields that constitute the writable fields in an asset's state. AssetID is mandatory along with at least one writable field. In this contract pattern, a partial state is used as an event.",
 			"properties": {
-				"assetID": {
-					"description": "The ID of a managed asset. The resource focal point for a smart contract.",
-					"type": "string"
-				},
 				"motorTemp": {
 					"description": "Asset motor temperature",
 					"type": "number"
@@ -420,7 +416,11 @@ var schemas = `{
 				"cleanessOfFloor": {
 					"description": "Asset cleaness of floor",
 					"type": "number"
-				}
+				},
+				"assetID": {
+					"description": "The ID of a managed asset. The resource focal point for a smart contract.",
+					"type": "string"
+				}				
 			},
 			"required": [
 				"assetID"
@@ -448,10 +448,6 @@ var schemas = `{
 		"state": {
 			"description": "A set of fields that constitute the complete asset state.",
 			"properties": {
-				"assetID": {
-					"description": "The ID of a managed asset. The resource focal point for a smart contract.",
-					"type": "string"
-				},
 				"motorTemp": {
 					"description": "Asset motor temperature",
 					"type": "number"
@@ -495,6 +491,10 @@ var schemas = `{
 				"cleanessOfFloor": {
 					"description": "Asset cleaness of floor",
 					"type": "number"
+				},
+				"assetID": {
+					"description": "The ID of a managed asset. The resource focal point for a smart contract.",
+					"type": "string"
 				}
 			},
 			"type": "object"

@@ -56,18 +56,18 @@ type ContractState struct {
 
 // AssetState - structure to store asset details
 type AssetState struct {
-	AssetID             *string  `json:"assetID,omitempty"`             // all assets must have an ID, primary key of contract
 	MotorTemp           *float64 `json:"motorTemp,omitempty"`           // asset motor temperature
-	CurrentFloor        *int64   `json:"currentFloor,omitempty"`        // current floor of asset
+	CurrentFloor        *float64 `json:"currentFloor,omitempty"`        // current floor of asset
 	DoorOpen            *bool    `json:"doorOpen,omitempty"`            // is asset door open
 	State               *string  `json:"state,omitempty"`               // asset state
-	NumberOfFloors      *int64   `json:"numberOfFloors,omitempty"`      // number of floors
+	NumberOfFloors      *float64 `json:"numberOfFloors,omitempty"`      // number of floors
 	CabinTemp           *float64 `json:"cabinTemp,omitempty"`           // asset cabin temperature
 	CabinSpeed          *float64 `json:"cabinSpeed,omitempty"`          // asset cabin speed
-	Direction           *int64   `json:"direction,omitempty"`           // asset direction
+	Direction           *float64 `json:"direction,omitempty"`           // asset direction
 	Load                *float64 `json:"load,omitempty"`                // asset load
-	CurtainOfLightBreak *int64   `json:"curtainOfLightBreak,omitempty"` // asset curtain of light break
-	CleanessOfFloor     *int64   `json:"cleanessOfFloor,omitempty"`     // asset cleaness of floor
+	CurtainOfLightBreak *float64 `json:"curtainOfLightBreak,omitempty"` // asset curtain of light break
+	CleanessOfFloor     *float64 `json:"cleanessOfFloor,omitempty"`     // asset cleaness of floor
+	AssetID             *string  `json:"assetID,omitempty"`             // all assets must have an ID, primary key of contract
 }
 
 var contractState = ContractState{MYVERSION}

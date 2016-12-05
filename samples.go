@@ -3,7 +3,6 @@ package main
 var samples = `
 {
 	"event": {
-		"assetID": "The ID of a managed asset. The resource focal point for a smart contract.",
 		"motorTemp": 160,
 		"currentFloor": 5,
 		"doorOpen": false,
@@ -14,14 +13,14 @@ var samples = `
 		"direction": 1,
 		"load": 210,
 		"curtainOfLightBreak": 0,
-		"cleanessOfFloor": 1
+		"cleanessOfFloor": 1,
+		"assetID": "The ID of a managed asset. The resource focal point for a smart contract.",
 	},
 	"initEvent": {
 		"nickname": "ELEVATOR",
 		"version": "The ID of a managed asset. The resource focal point for a smart contract."
 	},
 	"state": {
-		"assetID": "The ID of a managed asset. The resource focal point for a smart contract.",
 		"motorTemp": 160,
 		"currentFloor": 5,
 		"doorOpen": false,
@@ -32,6 +31,7 @@ var samples = `
 		"direction": 1,
 		"load": 210,
 		"curtainOfLightBreak": 0,
-		"cleanessOfFloor": 1
+		"cleanessOfFloor": 1,
+		"assetID": "The ID of a managed asset. The resource focal point for a smart contract.",
 	}
 }`
