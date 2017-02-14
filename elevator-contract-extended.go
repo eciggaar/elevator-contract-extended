@@ -277,7 +277,8 @@ func (t *SimpleChaincode) validateInput(args []string) (stateIn AssetState, err 
 //******************** createOrUpdateAsset ********************/
 
 func (t *SimpleChaincode) createOrUpdateAsset(stub shim.ChaincodeStubInterface, args []string) ([]byte, error) {
-	var assetID string // asset ID                    // used when looking in map
+	var assetID string    // asset ID                    // used when looking in map
+	var assetState string // asset State              // detect 'maintenance' state
 	var err error
 	var stateIn AssetState
 	var stateStub AssetState
@@ -304,10 +305,13 @@ func (t *SimpleChaincode) createOrUpdateAsset(stub shim.ChaincodeStubInterface, 
 			// state is an empty instance of asset state
 		}
 		// Merge partial state updates
-		stateStub, err = t.mergePartialState(stateStub, stateIn)
-		if err != nil {
-			err = errors.New("Unable to merge state")
-			return nil, err
+		assetState = *stateIn.State
+		if assetState == "maintenance" {
+			stateStub, err = t.mergePartialState(stateStub, stateIn)
+			if err != nil {
+				err = errors.New("Unable to merge state")
+				return nil, err
+			}
 		}
 	}
 	stateJSON, err := json.Marshal(stateStub)
